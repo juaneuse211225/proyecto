@@ -6,14 +6,15 @@ package com;
  */
 public class Libros {
 
-    private String titulo, autor, isbn;
-    private int Cantidad_Total, Cantidad_Disponible;
+    private String titulo, autor; 
+    private int Cantidad_Total, isbn, Cantidad_Disponible;
 
-    public Libros(String titulo, String autor, String isbn, int Cantidad_Total) {
+    public Libros(String titulo, String autor, int isbn, int Cantidad_Total) {
         this.titulo = titulo;
         this.autor = autor;
         this.isbn = isbn;
         this.Cantidad_Total = Cantidad_Total;
+        this.Cantidad_Disponible = Cantidad_Total;
     }
 
     public String getTitulo() {
@@ -32,11 +33,11 @@ public class Libros {
         this.autor = autor;
     }
 
-    public String getIsbn() {
+    public int getIsbn() {
         return isbn;
     }
 
-    public void setIsbn(String isbn) {
+    public void setIsbn(int isbn) {
         this.isbn = isbn;
     }
 

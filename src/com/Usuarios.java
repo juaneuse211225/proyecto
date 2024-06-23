@@ -12,10 +12,11 @@ public class Usuarios {
 //
 //Métodos:
 //
-    private String N_ID, nombre;
+    private int N_ID;
+    private String nombre;
     private Prestamos prestamoActivo;
 
-    public Usuarios(String N_ID, String nombre) {
+    public Usuarios(int N_ID, String nombre) {
         this.N_ID = N_ID;
         this.nombre = nombre;
         this.prestamoActivo = null;
@@ -57,11 +58,16 @@ public class Usuarios {
         }
     }
 
-    public String getN_ID() {
+    public int getN_ID() {
         return N_ID;
     }
 
-    public void setN_ID(String N_ID) {
+    @Override
+    public String toString() {
+        return "Usuarios{" + "N_ID=" + N_ID + ", nombre=" + nombre + ", prestamoActivo=" + (prestamoActivo != null ? prestamoActivo.isEstado() : "false") + "}";
+    }
+
+    public void setN_ID(int N_ID) {
         this.N_ID = N_ID;
     }
 
