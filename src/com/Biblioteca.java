@@ -22,15 +22,9 @@ public class Biblioteca {
         
 //Métodos:
 //
-//    agregarLibro(Libro libro)
-//    eliminarLibro(String isbn)
-//    registrarUsuario(Usuario usuario)
-//    eliminarUsuario(String idUsuario)
-//    buscarLibro(String isbn)
-//    listarLibros()
-//    listarUsuarios()
-//    prestarLibros(String idUsuario, List<String> isbns, String fechaPrestamo, String fechaDevolucion)
-//    devolverLibros(String idUsuario)
+//    
+//    
+//    
     
     /*metodos para libros*/
     public void Agregar_Libro(Libros lib){
@@ -54,5 +48,35 @@ public class Biblioteca {
         }
     }
     /*metodos para usuarios*/
+    public void Agregar_Usuario(Usuarios us){
+        usuarios.add(us);
+    }
     
+    public Usuarios Buscar_Usuario(int id){
+        for(Usuarios b: usuarios){
+            if(b.getN_ID().equals(id)){
+                return b;
+            }
+        }
+        return null;
+    }
+    public void Eliminar_Usuario(int id){
+        usuarios.remove(id);
+    }
+    public void Listar_Usuarios(){
+        for(Usuarios b: usuarios){
+            System.out.println(b.toString());
+        }
+    }
+    public void Prestar_Libros(){
+        
+    }
+    public void Devolver_Libros(int idUsuario){
+        Usuarios usuario1 = Buscar_Usuario(idUsuario);
+        if(usuario1 != null){
+        usuario1.Devolver_Libro();
+        }else{
+            System.out.println("Usuario no encontrado");
+        }
+    }
 }
