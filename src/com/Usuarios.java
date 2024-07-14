@@ -5,13 +5,6 @@ package com;
  * @author juan
  */
 public class Usuarios {
-
-//        String nombre
-//    String idUsuario
-//    Prestamo prestamoActivo (null si no tiene préstamo activo)
-//
-//Métodos:
-//
     private int N_ID;
     private String nombre;
     private Prestamos prestamoActivo;
@@ -22,10 +15,6 @@ public class Usuarios {
         this.prestamoActivo = null;
     }
 
-    //    prestarLibros(Prestamo prestamo)
-//    devolverLibros()
-//    tienePrestamoActivo()
-//    mostrarLibrosPrestados()
     public void Prestar_Libros(Prestamos prestamo) {
         if (prestamoActivo == null) {
             prestamoActivo = prestamo;

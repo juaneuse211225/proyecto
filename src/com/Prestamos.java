@@ -9,16 +9,6 @@ import java.util.List;
  * @author juan
  */
 public class Prestamos {
-//        List<Libro> libros
-//    Usuario usuario
-//    String fechaPrestamo
-//    String fechaDevolucion
-//    boolean activo
-//
-//Métodos:
-//
-//    marcarDevuelto()
-//    estaActivo()
     
     private List<Libros> lista_libros;
     private Usuarios usuario;

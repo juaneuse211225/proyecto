@@ -9,8 +9,7 @@ import java.util.List;
  * @author juan
  */
 public class Biblioteca {
-//Atributos:
-
+    
     private List<Libros> libros;
     private List<Usuarios> usuarios;
     private List<Prestamos> prestamos;
@@ -20,14 +19,7 @@ public class Biblioteca {
         this.usuarios = new ArrayList<>();
         this.prestamos = new ArrayList<>();
     }
-        
-//Métodos:
-//
-//    
-//    
-//    
     
-    /*metodos para libros*/
     public void Agregar_Libro(Libros lib){
         libros.add(lib);
         System.out.println("Guardado Correctamente");
@@ -72,6 +64,7 @@ public class Biblioteca {
         }
     }
     public void Prestar_Libros(int num_id, List<Integer> isbns, int dias_prestamo){
+        
            Usuarios usuario = Buscar_Usuario(num_id);
            List<Libros> librosPrestados = new ArrayList<>();
         if (usuario != null) {  
